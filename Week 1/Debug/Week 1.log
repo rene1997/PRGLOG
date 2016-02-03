@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Week 1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Opdracht 1.4.c
+Opdracht 1.4.obj : error LNK2005: _main already defined in Opdracht 1.3.obj
+C:\Users\rkeet\OneDrive\Documents\school\2. jaar 2\periode 3\PRGLOG\Week 1\Debug\Week1.exe : fatal error LNK1169: one or more multiply defined symbols found
