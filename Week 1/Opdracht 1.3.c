@@ -2,11 +2,14 @@
 
 void Opdracht1_3();
 void Opdracht1_4();
+void Opdracht1_13();
 
 void main() {
 	
-	Opdracht1_3();
-	Opdracht1_4();
+	//Opdracht1_3();
+	//Opdracht1_4();
+	Opdracht1_13();
+
 }
 
 
@@ -16,7 +19,7 @@ void Opdracht1_3() {
 	int interval = 20;	//grootte van het interval
 	float fahr, celsius;		
 	fahr = laagste;
-	printf("Fahrenheid:\tCelsius:\n");					//print headers
+	printf("Fahrenheit:\tCelsius:\n");					//print headers
 	//print all requested degrees
 	while (fahr <= hoogste)
 	{
@@ -41,5 +44,21 @@ void Opdracht1_4() {
 		printf("%3.0f %11.1f \n", celsius, fahr);
 		celsius += interval;
 	}
+}
 
+void Opdracht1_13() {
+	char strings[3][10];
+	strcpy(strings[0], "hello");
+	strcpy(strings[1], "world");
+	strcpy(strings[2], "osidjfaoijfsaofij");
+	
+	for (int i = 0; i < 2; i++) {
+		//printf(strings[i]);
+		printf("\n");
+		for (int j = 0; j < 3; j++) {
+			printf("*");
+		}
+		
+	}
+	printf("\n");
 }
