@@ -27,5 +27,19 @@ void Opdracht1_3() {
 }
 
 void Opdracht1_4() {
+	printf("\n");
+
+	float fahr;
+	float celsius = 0;
+	int hoogste = 50;
+	int interval = 5;
+
+	printf("Celsius Fahrenheit \n");
+	while (celsius <= hoogste)
+	{
+		fahr = (celsius * (9.0 / 5.0)) + 32.0;
+		printf("%3.0f %11.1f \n", celsius, fahr);
+		celsius += interval;
+	}
 
 }
