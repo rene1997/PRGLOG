@@ -46,19 +46,49 @@ void Opdracht1_4() {
 	}
 }
 
+void drawHorizontalHistogram(int,int[]);
+
 void Opdracht1_13() {
-	char strings[3][10];
-	strcpy(strings[0], "hello");
-	strcpy(strings[1], "world");
-	strcpy(strings[2], "osidjfaoijfsaofij");
-	
-	for (int i = 0; i < 2; i++) {
-		//printf(strings[i]);
-		printf("\n");
-		for (int j = 0; j < 3; j++) {
-			printf("*");
-		}
-		
+	int counter = 0;
+	char c = 0;
+	int words[15];
+
+	for (int i = 0; i < sizeof(words); i++) {
+		words[i] = 0;
 	}
-	printf("\n");
+	
+	
+	printf("typ a word and press '0' \n");
+	while (1) {
+		c = getchar();
+			
+		if (c == '0') {
+			//string ended and draw the histogram
+			drawHorizontalHistogram(15, words);
+		}
+		else if (c == ' ') {
+			counter ++;
+		}
+		else {
+			words[counter]++;
+		}
+	}
+	
+}
+
+void drawHorizontalHistogram(int maxLength, int words[]) {
+	
+	//for each length of words
+	for (int i = 1; i < maxLength; i++) {
+		printf("%2d:", i);
+		
+		int j = 0;
+		//check for each length which words are the same length
+		for (; j < 15; j++){
+			if (words[j] == i)
+				//print a  *
+				putchar('*');
+		}
+		printf("\n");
+	}
 }
