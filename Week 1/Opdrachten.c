@@ -1,15 +1,16 @@
 #include <stdio.h>
-
-void Opdracht1_3();
-void Opdracht1_4();
-void Opdracht1_13();
+#include "Opdrachten.h"
+#include <string.h>
+#include <ctype.h>
 
 void main() {
 	
 	//Opdracht1_3();
 	//Opdracht1_4();
-	Opdracht1_13();
-
+	//Opdracht1_13();
+	//opdracht1_17();
+	opdracht1_18();
+	//opdracht2_5();
 }
 
 
@@ -92,3 +93,78 @@ void drawHorizontalHistogram(int maxLength, int words[]) {
 		printf("\n");
 	}
 }
+
+//schrijf een programma dat alle invoerregels afdrukt die langer zijn dan 80 tekens
+void opdracht1_17()
+{
+	int i = 0;
+	int j = 0;
+	char c[9999] = { ')' };
+
+	scanf("%[^\n]%*c", c); //telt spaties mee met input
+	for (i = 0; i < sizeof(c); i++) // telt aantal characters in array
+	{
+		if(!(c[i] == ')'))
+		{
+			j++;  
+		}
+	}
+	if(j > 80)
+	{
+		printf(c); 
+	}
+	scanf("%s", c);
+}
+
+void opdracht1_18()
+{
+	int i = 0;
+	char c[9999] = { ' ' };
+	char c1[9999] ={ ' ' };
+	char x;
+
+	scanf("%[^\n]%*c", c); //telt spaties mee met input
+	for (i = 0; i < sizeof(c); i++) // telt aantal characters in array
+	{
+		if (!isspace(c[i]))
+		{
+			x = c[i];
+			strcat(c1, x);
+		}
+	}
+
+	printf(c);
+	scanf("%s", c);
+}
+
+//schfijf een functie die als resultaat de positie levert van het eerste teken in s1 dat ook in s2 voorkomt
+//als geen enkel teken overeen komt geeft de functie -1 terug
+void opdracht2_5()
+{
+	char c;
+	int result = 0;
+	char s1[] = "mooie";
+	char s2[] = "test";
+	result = compare(s1, s2) + 1;
+	printf("%i \n", result);
+	c = getchar();
+}
+
+int compare(char s1[], char s2[])
+{
+	int i = 0;
+	int j = 0;
+
+	for (i = 0; i < sizeof(s1); i++) // krijg char uit array 1
+	{
+		for (j = 0; j < sizeof(s2); j++) // krijg char uit array 2
+		{
+			if (s1[i] == s2[j]) // verglijkt 2 chars met elkaar
+			{
+				return i;
+			}
+		}
+	}
+	return -1;
+}
+
