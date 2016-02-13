@@ -10,3 +10,5 @@ void opdracht2_5();
 int compare(char s1[], char s2[]);
 
 
+
+

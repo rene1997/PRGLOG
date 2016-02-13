@@ -116,24 +116,23 @@ void opdracht1_17()
 	scanf("%s", c);
 }
 
+//schrijf een programma die alle spaties uit een stuk tekst haalt
 void opdracht1_18()
 {
-	int i = 0;
-	char c[9999] = { ' ' };
-	char c1[9999] ={ ' ' };
-	char x;
+	int i, j = 0;
+	char c[9999] = {0}; // maakt lijst vol met nullpointers
+	char c1[9999] ={0}; //lijst zonder spaties
 
-	scanf("%[^\n]%*c", c); //telt spaties mee met input
-	for (i = 0; i < sizeof(c); i++) // telt aantal characters in array
-	{
-		if (!isspace(c[i]))
+	scanf("%[^\n]%*c", c);
+
+	for (i = 0; c[i] != 0; i++)
+		if (c[i] != ' ') //controleert op spaties
 		{
-			x = c[i];
-			strcat(c1, x);
+			c1[j] = c[i]; //kopieert naar andere array
+			j++;
 		}
-	}
 
-	printf(c);
+	printf(c1);
 	scanf("%s", c);
 }
 
