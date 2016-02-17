@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "Header.h"
+#include "llist.h"
 
 int main(){
 	int idx;
@@ -11,6 +12,7 @@ int main(){
 		add(idx);
 	}
 	show();
+	reversePrint();
 
 	return 1;
 }
