@@ -89,3 +89,19 @@ int nrItems()
 	}
 	return i + 1;
 }
+
+int excist(int data)
+{
+	int nr = nrItems();
+	int i = 0;
+	struct node* p = pHead;
+
+	for (i = 0; i < nr; i++)
+	{
+		if (p->data == data)
+			return 1;
+		p = p->next;
+	}
+
+	return 0;
+}

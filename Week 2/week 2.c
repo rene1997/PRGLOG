@@ -16,7 +16,7 @@ int main(){
 	show();
 	reversePrint();
 
-	testAmount = nrItems();
+	testAmount = excist(99);
 	printf("%d \n", testAmount);
 
 	return 1;
