@@ -75,4 +75,13 @@ void reversePrint()
 	printf("\n");
 }
 
-
+int nrItems()
+{
+	int i = 0;
+	struct node *p = pHead;
+	for (; NULL != p->next; p = p->next)
+	{
+		i++;
+	}
+	return i;
+}

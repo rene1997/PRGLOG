@@ -4,6 +4,7 @@
 
 int main(){
 	int idx;
+	int testAmount;
 
 	init();
 
@@ -13,6 +14,9 @@ int main(){
 	}
 	show();
 	reversePrint();
+
+	testAmount = nrItems();
+	printf("%d \n", testAmount);
 
 	return 1;
 }
