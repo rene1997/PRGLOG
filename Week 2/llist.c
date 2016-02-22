@@ -47,17 +47,20 @@ int add(int data)
 void show()
 {
 	struct node *p = pHead;
-	int nr = 0;
+	int i;
+	int nr = nrItems();
 
-	for (; NULL != p->next; p = p->next)
+	for (i = 0; i < nr; i++)
 	{
-		printf("node nr: %d heeft data [%d]\n", nr++, p->data);
+		printf("node nr: %d heeft data [%d]\n", i, p->data);
+		p = p->next;
 	}
 }
 
 void reversePrint() 
 {
-	int nr = 0;
+	int nr = nrItems();
+	int i = 0;
 	struct node* p = pHead;
 	if (p == NULL) return; // empty list, exit
 							  // Going to last Node
@@ -68,9 +71,10 @@ void reversePrint()
 	// Traversing backward using prev pointer
 	printf("Reverse: ");
 
-	for (; NULL != p->last; p = p->last)
+	for (i = 0; i < nr; i++)
 	{
-		printf("node nr: %d heeft data [%d]\n", nr++, p->data);
+		printf("node nr: %d heeft data [%d]\n", i, p->data);
+		p = p->last;
 	}
 	printf("\n");
 }
@@ -83,5 +87,5 @@ int nrItems()
 	{
 		i++;
 	}
-	return i;
+	return i + 1;
 }

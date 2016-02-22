@@ -12,6 +12,7 @@ int main(){
 	{
 		add(idx);
 	}
+
 	show();
 	reversePrint();
 
