@@ -6,17 +6,22 @@ int main(){
 	int idx;
 	int testAmount;
 
-	init();
+	ll_init();
 
 	for (idx = 0; idx < 10; idx++)
 	{
-		add(idx);
+		ll_add(idx);
 	}
 
-	show();
-	reversePrint();
+//	ll_show();
+//	ll_reversePrint();
 
-	testAmount = excist(99);
+//	testAmount = ll_excist(99);
+	ll_remove(5);
+	ll_show();
+	ll_reversePrint();
+
+	testAmount = ll_nrItems();
 	printf("%d \n", testAmount);
 
 	return 1;

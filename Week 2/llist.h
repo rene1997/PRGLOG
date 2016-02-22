@@ -8,12 +8,13 @@ struct node
 	struct node *last;
 };
 
-void init();
-int add(int data);
-void show();
-void reversePrint();
-int excist(int data);
-int nrItems();
+void ll_init();
+int ll_add(int data);
+void ll_show();
+void ll_reversePrint();
+int ll_excist(int data);
+int ll_nrItems();
+void ll_remove(int index);
 
 #endif
 #pragma once
