@@ -12,6 +12,7 @@ void init();
 int add(int data);
 void show();
 void reversePrint();
+void excist();
 
 #endif
 #pragma once

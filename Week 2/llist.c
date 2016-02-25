@@ -55,6 +55,10 @@ void show()
 	}
 }
 
+void excist(struct node node1) {
+
+}
+
 void reversePrint() 
 {
 	int nr = 0;
