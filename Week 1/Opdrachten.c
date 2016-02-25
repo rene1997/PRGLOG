@@ -26,7 +26,7 @@ void Opdracht1_3() {
 	{
 		celsius = (5.0 / 9.0) * (fahr - 32.0);			//calculate celcius
 		printf("%3.0f \t\t %6.1f\n",fahr, celsius);		//print values
-		fahr += interval;								//add interval value
+		fahr += interval;								//ll_add interval value
 	}
 }
 
