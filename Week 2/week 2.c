@@ -17,7 +17,7 @@ int main(){
 //	ll_reversePrint();
 
 //	testAmount = ll_excist(99);
-	ll_remove(5);
+	ll_remove(0);
 	ll_show();
 	ll_reversePrint();
 

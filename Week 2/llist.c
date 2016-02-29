@@ -57,15 +57,7 @@ void ll_show()
 	}
 }
 
-<<<<<<< HEAD
-void excist(struct node node1) {
-
-}
-
-void reversePrint() 
-=======
 void ll_reversePrint() 
->>>>>>> origin/master
 {
 	int nr = ll_nrItems();
 	int i = 0;
